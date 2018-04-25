@@ -1,0 +1,38 @@
+
+<div class="hmpg">
+  <div class="logo">
+    <img src="assets/img/icons/wfh-green.svg" alt="logo" />
+  </div>
+  <h1>Welcome </h1>
+  <p>Home screen app ui</p>
+
+  <form validate #loginForm="ngForm" class="logfm animated scallDownUp" >
+
+     <mat-form-field >
+      <mat-select placeholder="Chooose Your Location Here ...." [(ngModel)]='selected' name="selected" [(value)]="location" required>
+        <!--<mat-option value="KK Nagar">KK Nagar</mat-option>
+        <mat-option value="MGR Nagar">MGR Nagar</mat-option>
+        <mat-option value="Ashok Nagar">Ashok Nagar</mat-option>
+        <mat-option value="Nesapakkam">Nesapakkam</mat-option>
+       <mat-option value="Vadapalani">Vadapalani</mat-option> -->
+        <mat-option *ngFor="let lst of aloc" [value]="lst.Location">
+      {{lst.Location }}
+    </mat-option>
+      </mat-select>
+    </mat-form-field> 
+  
+
+    <a (click)="getLoction(location)"  [ngClass]="{'disables': loginForm.form.invalid,'enabled' : loginForm.form.valid }" ><button  mat-raised-button   color="warn">Book Your Order Now</button></a>
+  </form>
+  <div [ngClass]="{'inactive': isClassVisible }" class="trnscnt"> 
+  
+   <div class="rmlbl">
+     <mat-checkbox [(ngModel)]="tcchecked">I have read and agree <a routerLink="terms">Terms and Conditions</a> & <a routerLink="policy">Privacy policy </a></mat-checkbox>
+     <a  class="buttncls" [ngClass]="{'active': tcchecked }" (click)="closeTPMDL()" >
+       <button  mat-raised-button   color="warn">Agree</button>
+    </a>
+     <!-- <p> I have read and agree <a>Terms and conditions</a> & <a>Privacy policy </a></p> -->
+  
+   </div>
+  </div>
+</div>

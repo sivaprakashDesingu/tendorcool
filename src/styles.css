@@ -1,0 +1,177 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {margin:0;padding:0;box-sizing:border-box;color:#37323d;}
+body *,.mat-tab-label, .mat-tab-link{font-family: 'Lato', sans-serif;}
+.fl{float:left;}
+.fr{float:right;}
+a{text-decoration:none;}
+.cls::after{display:block;content:"";clear:both;}
+.bkform .mat-input-element,.bookfm .mat-input-element,.bkform .mat-form-field-placeholder,.bookfm .mat-form-field-placeholder,.bkform .mat-focused .mat-form-field-placeholder{color:#37323d;}
+.bkform .mat-form-field-underline,.bkform .mat-form-field-ripple{background-color:#37323d;}
+.logfm .mat-input-element,.bookfm .mat-input-element{color:#fff;}
+.logfm .mat-form-field-placeholder,.bookfm .mat-form-field-placeholder{color:#fff;}
+.mat-form-field-ripple,.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{background-color:#fff;}
+.mat-form-field{width:75%;}
+.logfm .mat-form-field-underline,.bookfm .mat-form-field-underline{background-color:#fff;}
+.mat-select-value,.mat-select-arrow,.mat-form-field.mat-focused.mat-primary .mat-select-arrow{color:#fff;}
+.bkpag .mat-form-field{width:90%;}
+.mat-icon{color:#fff;}
+.mat-tab-label{color:#fff;width: 50%;padding: 0;}
+button{box-shadow: 0 0 9px #37323d;}
+.mat-raised-button.mat-warn{background:#37323d;}
+.mat-calendar-body-selected{background-color: #5BAD1E;}
+.mat-calendar-body-today:not(.mat-calendar-body-selected){border-color:#5BAD1E;}
+.tablefmr .matslt .mat-form-field-infix{padding: .4375em 0 0.5em!important;}
+.leadlst .mat-card-header-text{display:none;}
+.mat-card-header-text{margin:0!important;}
+.srchftr .mat-input-placeholder{color:#fff;}
+.srchftr .mat-form-field-underline{background:#fff;}
+.alert-danger{color:#FF6E6E;}
+.canrsn .mat-form-field-ripple{background:#000;}
+.mat-form-field-invalid .mat-form-field-ripple{background:#FF6E6E;}
+.bkform .mat-raised-button.mat-warn{color:#fff;}
+a{color:#1698e6;}
+/* Animation */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+.animated.infinite {-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite}
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s
+}
+/* Swing animation */
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg)
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg)
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg)
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg)
+    }
+}
+
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        -ms-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        -ms-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg)
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        -ms-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg)
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        -ms-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg)
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        -ms-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg)
+    }
+}
+
+.swing {
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing
+}
+
+/* Swing animation */
+
+/* scall */
+@-webkit-keyframes scallDownUp {
+
+    0%{-webkit-transform: scale(0.7);
+        transform: scale(0.7);opacity:0;}
+
+    100%{-webkit-transform: scale(1);
+        transform: scale(1);opacity:1;}
+}
+.scallDownUp {
+    -webkit-animation-name: scallDownUp;
+    animation-name: scallDownUp;
+}
+/* Fade in down */
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+.mat-slider-horizontal .mat-slider-track-background,.mat-slider-horizontal .mat-slider-track-fill,.mat-slider-horizontal .mat-slider-ticks-container,.mat-slider-horizontal .mat-slider-ticks,.mat-slider-horizontal .mat-slider-wrapper,.mat-slider-horizontal .mat-slider-track-wrapper{height:10px!important;}
+.flrdet .mat-slider-thumb{width:30px;height:30px;bottom:-15px;}
+.flrdet .mat-select-value{color:#000;}
+.mat-focused .mat-form-field-placeholder,.mat-form-field-placeholder{color:#fff;}
+.mat-form-field-underline{background:#fff;}
+.fullist .mat-form-field{width:100%;}
+.mat-checkbox .mat-checkbox-background{border: 1px solid;}
+.mat-checkbox .mat-checkbox-layout{white-space: pre-wrap;text-align:left;color:#37323d;}
+.mat-checkbox .mat-checkbox-inner-container{margin-top:6px; }
+
+/* page headder */
+ .bkhdg{
+     width: 92%;
+     display: inline-block;
+     text-align: center;
+     margin: auto;
+     vertical-align: top;
+     color: #fff;
+}
+ .bkhdr{
+     text-align:left; padding:10px;
+     background:#7f838e;
+    
+}

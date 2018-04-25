@@ -1,0 +1,44 @@
+{
+  "book": [{
+      "id": "sivaprakash@hotcourses.co.in",
+      "Project": "POCS",
+      "Designation": "Web Developer",
+      "name": "Sivaprakash D",
+      "date": "10/03/2017",
+      "reason": "Since am going to my native will take WFH on 10th Nov 2017 Please."
+    },
+
+    {
+      "id": "bubesh@hotcourses.co.in",
+      "Project": "PGS",
+      "Designation": "Senior Web Developer",
+      "name": "Bubeshkumar G",
+      "date": "30/12/2017",
+      "reason": "Since am going to my native will take WFH on 10th Nov 2017 Please."
+    },
+    {
+      "id": "sarala@hotcourses.co.in",
+      "Project": "HCINT",
+      "Designation": "Web Developer",
+      "name": "SaralaDevi G",
+      "date": "10/20/2017",
+      "reason": "Since am going to my native will take WFH on 10th Nov 2017 Please."
+    },
+    {
+     "id": "sivaprakash@hotcourses.co.in",
+      "Project": "POCS",
+      "Designation": "Web Developer",
+      "name": "Sivaprakash D",
+      "date": "12/30/2017",
+      "reason": "Since am going to my native will take WFH on 20th DEC 2017 Please."
+    },
+    {
+     "id": "sivaprakash@hotcourses.co.in",
+      "Project": "POCS",
+      "Designation": "Web Developer",
+      "name": "Sivaprakash D",
+      "date": "11/29/2017",
+      "reason": "Due to Heady reain in the my place will take WFH today(10th Nov 2017) Please."
+    }
+  ]
+}

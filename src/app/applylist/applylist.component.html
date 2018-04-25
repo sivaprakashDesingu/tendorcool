@@ -1,0 +1,154 @@
+<div class="bookpage">
+  <div class="bkhdr">
+    <a (click)="goBack()">
+      <img src="assets/img/icons/back-white.svg" width="20" height="20" alt="src">
+    </a>
+    <span class="bkhdg">Where to Delever?</span>
+  </div>
+  <div class="cnlist" >
+    
+
+<div id="fltpr" class="flrdet">
+
+        <div class="flds">
+            <h4>Please confirm Your List......</h4>
+        </div>
+        <ul class="ucart">
+            <li class="prhd">
+                <span>Product</span>
+                <span>Quantity</span>
+                <span>Price</span>
+            <li>
+
+        </ul>
+        <div *ngFor="let lst of prlist">
+          
+          
+             <div *ngFor="let bags of orids" class="carlt">
+               <div class="carinlt" *ngIf="bags == lst.Pro_id">
+
+                     <ul class="ucart">
+                        <li class="prhd">
+                           
+                            <span> 
+                                <img src="assets/img/prod/{{lst.Proimage}}"  alt="product1"/>
+                                <span class="pn">{{lst.Pro_Name}}</span>
+                            </span>
+
+                            <span>
+                                <!-- <button  (click)=subQuantity(num) mat-raised-button  pull-right color="warn"> - </button> -->
+                                {{ordua[bags]}}
+                                
+                                <!-- <input id="ordua{{bags}}" [(ngModel)]="ordua[bags]" type="text"/> -->
+                                 <!-- <button (click)=addQuantity(num)  mat-raised-button  pull-right color="warn"> + </button> -->
+                               </span>
+                            <span>
+                               {{ordpr[bags]}}
+                                 <!-- <input class="bgslstamt"  id="ordpr{{bags}}" [(ngModel)]="ordpr[bags]"  type="text" readonly/>  -->
+                            </span>
+                        </li>
+                    </ul>
+               </div>
+            </div> 
+       </div>
+
+        <ul class="ucart tlpd ">
+            <li class="prhd" *ngIf="crttotal!=0">
+                <span>Total Amout</span>
+                <span>
+                   {{ttcst}}
+                </span>
+                
+                </li>
+        </ul>  
+</div>
+
+
+  </div>
+<div class="chodr">
+  <a routerLink="/book"   ><button class="bkbtn "  mat-raised-button  pull-right color="warn">Change Order</button></a>
+</div>
+
+  <div class="fullist">
+ <h4>Personal Details</h4>
+
+       
+
+  
+     <form validate #bkform="ngForm" class="bkform animated scallDownUp" name="bkform"> 
+    <mat-form-field class="namfld">
+        <input #myname="ngModel" required matInput minlength="3" pattern="[a-zA-Z]+" placeholder="Your Name " [(ngModel)]="fn" name ="fn">
+      </mat-form-field>
+
+      <div *ngIf="myname.errors && (myname.dirty || myname.touched)" class="alert alert-danger">
+                <div [hidden]="!myname.errors.required">
+                    Let me know your name please
+                </div>
+                  <div [hidden]="!myname.errors.minlength">
+                  Name should contain more than 3 chars
+                </div>
+                  <div [hidden]="!myname.errors.pattern">
+                   Only Characters Allowed
+                </div>
+                               
+      </div> 
+      <!-- <mat-form-field class="namfld">
+        <input matInput  placeholder="Father/Mother Name *" [(ngModel)]="pn">
+      </mat-form-field> -->
+       <mat-form-field class="namfld">
+        <input #myemail="ngModel"  required  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" matInput  placeholder="Email ID" [(ngModel)]="ei" name="ei">
+      </mat-form-field> 
+
+      <div *ngIf="myemail.errors && (myemail.dirty || myemail.touched)" class="alert alert-danger">
+                <div [hidden]="!myemail.errors.required">
+                    Let me know your Mail ID please.
+                </div>
+                  <div [hidden]="!myemail.errors.pattern">
+                   Incorrect format
+                </div>
+                               
+      </div> 
+      <mat-form-field class="namfld">
+        <input #mymob="ngModel" pattern="[0-9]*"  minlength="10"  maxlength="10" matInput required placeholder="Mobile Number " [(ngModel)]="bm" name="mob">
+      </mat-form-field>
+
+       <div *ngIf="mymob.errors && (mymob.dirty || mymob.touched)" class="alert alert-danger">
+                <div [hidden]="!mymob.errors.required">
+                    Let me know your mobile Number.
+                </div>
+                   <div [hidden]="!mymob.errors.minlength">
+                   Mobile number Length should be 10 
+                </div>
+                  <div [hidden]="!mymob.errors.pattern">
+                   Mobile number should not contain Characters
+                </div>
+                               
+      </div>
+
+       <h4>Full Address</h4>
+       <mat-form-field class="namfld">
+        <input matInput  placeholder="Flat/Door No*" [(ngModel)]="add1" required name="add1">
+      </mat-form-field>
+      <mat-form-field class="namfld">
+        <input matInput  placeholder="Street Name*" [(ngModel)]="add2" required name="add2">
+      </mat-form-field>
+      <mat-form-field class="namfld">
+        <input matInput  placeholder="Area*" [(ngModel)]="add3" readonly name="add3">
+      </mat-form-field>
+      <mat-form-field class="namfld">
+        <input #mypin="ngModel" pattern="[0-9]*"  maxlength="6" matInput  placeholder="Pincode*" [(ngModel)]="add4" name="add4">
+      </mat-form-field>
+       <div *ngIf="mypin.errors && (mypin.dirty || mypin.touched)" class="alert alert-danger">
+                
+                <div [hidden]="!mypin.errors.pattern">
+                  Only Nemeric values allowed
+                </div>             
+      </div>
+
+       <!-- <a  (click)="isOrdered()" class="bkbtn"  > -->
+         <button (click)="isOrdered()" class="bkbtn"  [disabled]="bkform.form.invalid" mat-raised-button  pull-right color="warn">Place Order</button>
+        
+        <!--</a> -->
+     </form>
+  </div>
+</div>

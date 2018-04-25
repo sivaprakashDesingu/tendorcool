@@ -1,0 +1,5 @@
+.terms{padding:10px;}
+P,li{font-size:16px;line-height:27px;}
+p,li{padding:0 0 15px;margin:0}
+ul,ol{padding: 0;list-style-position: inside;}
+ol ul{padding-left:20px;}

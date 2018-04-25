@@ -1,0 +1,6 @@
+.example-h2 {margin: 10px;}
+.example-section {display: flex;align-content: center;align-items: center;height: 60px;}
+.example-margin {margin: 0 10px;}
+.hmpg{background:url("../assets/img/bg/bg1.jpg") no-repeat;background-size:cover;text-align:center;}
+.logo{width:80px;margin:0 auto;padding:50px 0;}
+.logo img{width:100%;height:auto;}

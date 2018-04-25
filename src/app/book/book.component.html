@@ -1,0 +1,120 @@
+<div class="bookpage">
+    <div class="bkhdr">
+        <a (click)="goBack()">
+      <img src="assets/img/icons/back-white.svg" width="20" height="20" alt="src">
+    </a>
+        <span class="bkhdg">Book your Course</span>
+    </div>
+
+  
+    <div class="producrs">
+
+ 
+        <div class="pro-card animated scallDownUp" *ngFor="let lst of prlist">
+
+
+            <div class="pro-img">
+                <!-- <p>{{lst.Proimage}}</p>  -->
+                <img src="assets/img/prod/{{lst.Proimage}}" alt="product1" />
+                <P class="prname">{{lst.Pro_Name}}</P>
+            </div>
+            <div class="pro-des">
+                <p>{{lst.Pro_des}}</p>
+                
+                <span class="pr-ra">
+            <span class="pr-pr-gr">
+              <span>&#2352;</span>
+                <span>{{lst.Pro_Price}}</span>
+                </span>
+
+                </span>
+                <div class="btnwpr">
+                    <a (click)="loadMyBag(lst.Pro_id,'')" class="orbtn"><button mat-raised-button  pull-right color="warn">Add to Bag</button></a>
+                     <a (click)="loadMyBag(lst.Pro_id,'one')"  class="orbtn"><button mat-raised-button  pull-right color="warn">Order Now</button></a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+ 
+    <div  class="fltbtn" >
+            <!-- *ngIf="bagLng>=1" -->
+        <button [ngClass]="{'active': bagLng>=1 }" (click)="openFltPad()" mat-raised-button pull-right color="warn">Order My BAG</button>
+    </div>
+    <!-- [ngClass]="{'active': isClassVisible }" -->
+    <div [ngClass]="{'active': isClassVisible }" id="fltpr" class="flrdet">
+
+        <a (click)="closeFltPad()" class="clsftr">
+      <img class="stsimg" src="assets/img/icons/failed.svg" alt="Faile" />
+    </a>
+
+        <div class="flds">
+            <h2>Your Bag has.</h2>
+        </div>
+        <ul class="ucart">
+            <li class="prhd">
+                <span>Product</span>
+                <span>Quantity</span>
+                <span>Price</span>
+                <li>
+
+        </ul>
+        <div *ngFor="let lst of prlist">
+            <div *ngFor="let bags of myBag" class="carlt">
+                <div *ngFor="let num of inngarry">
+                <div class="carinlt" *ngIf="bags == lst.Pro_id && bags==num">
+                  
+                    <ul class="ucart">
+                        <li class="prhd">
+                            <a (click)="removeFromBag(bags)" class="clsftr">
+                                <img class="stsimg" src="assets/img/icons/failed.svg" alt="Faile" />
+                            </a>
+                            <span> 
+                                <img src="assets/img/prod/{{lst.Proimage}}"  alt="product1"/>
+                                <span class="pn">{{lst.Pro_Name}}</span>
+                            </span>
+
+                            <span>
+                                <button  (click)=subQuantity(num) mat-raised-button  pull-right color="warn"> - </button>
+                                 <input id="qtd{{num}}" [(ngModel)]="qtd[num]" type="text"/>
+                                 <button (click)=addQuantity(num)  mat-raised-button  pull-right color="warn"> + </button>
+                               </span>
+                            <span>
+                               
+                                 <input class="bgslstamt" id="sinttl{{num}}" [(ngModel)]="sinttl[num]" type="text" readonly/> 
+                                 <!-- {{lst.Pro_Price*qtd[num]}} -->
+                            </span>
+                        </li>
+                    </ul>
+              
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+     
+          <ul class="ucart tlpd ">
+            <li class="prhd" *ngIf="crttotal!=0">
+                <span>Total Amout</span>
+                <span>
+                    <input class="bgslstamt" id="Total" [(ngModel)]="crttotal" type="text" readonly/> 
+                </span>
+                
+                </li>
+                    <li class="prhd" *ngIf="crttotal==0">
+                <span>Your Bag is Empty Now</span>
+                </li>
+
+        </ul>  
+
+     <div class="fltbtn">
+        <button [ngClass]="{'active': bagLng>=1 }" (click)="confimCar(myBag,qtd,sinttl,crttotal)" mat-raised-button pull-right color="warn">Confrim </button>
+    </div>
+
+</div>

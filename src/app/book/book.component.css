@@ -1,0 +1,195 @@
+.bookpage{
+     /* background:url("../../assets/img/bg/bg1.png") #cde4da no-repeat;
+     background-size:cover; */
+     /* background: -webkit-linear-gradient(290deg, rgb(102, 105, 114) 0%, rgb(139, 146, 156) 20%, rgb(95, 93, 106) 60%, rgb(41, 35, 45) 90%, rgb(41, 35, 45) 99%, rgb(40, 34, 44) 100%);
+     background: -o-linear-gradient(290deg, rgb(102, 105, 114) 0%, rgb(139, 146, 156) 20%, rgb(95, 93, 106) 60%, rgb(41, 35, 45) 90%, rgb(41, 35, 45) 99%, rgb(40, 34, 44) 100%);
+     background: -ms-linear-gradient(290deg, rgb(102, 105, 114) 0%, rgb(139, 146, 156) 20%, rgb(95, 93, 106) 60%, rgb(41, 35, 45) 90%, rgb(41, 35, 45) 99%, rgb(40, 34, 44) 100%);
+     background: -moz-linear-gradient(290deg, rgb(102, 105, 114) 0%, rgb(139, 146, 156) 20%, rgb(95, 93, 106) 60%, rgb(41, 35, 45) 90%, rgb(41, 35, 45) 99%, rgb(40, 34, 44) 100%);
+     background: linear-gradient(160deg, rgb(102, 105, 114) 0%, rgb(139, 146, 156) 20%, rgb(95, 93, 106) 60%, rgb(41, 35, 45) 90%, rgb(41, 35, 45) 99%, rgb(40, 34, 44) 100%); */
+     text-align:center;
+     min-height:calc(100vh + 70px);
+     position:relative;
+}
+ .bookpage .mat-form-field{
+     width:90%;
+}
+
+ .producrs{
+     padding:10px 10px 66px;
+}
+ .pro-card{
+     box-shadow: 0 0 9px #37323d;
+     position:relative;
+     border-radius: 5px;
+     margin-bottom:40px;
+     border: 1px solid #37323d;
+}
+ .pro-card img{
+     width:100%;
+     /* border-radius: 5px; */
+     display:block;
+     height:150px;
+}
+ .pro-des{
+     background:#fff;
+     padding:30px 10px 30px;
+     border-radius: 0 0 5px 5px 
+}
+ .pr-ra{
+     display: block;
+     position: absolute;
+     min-width: 60px;
+     min-height: 60px;
+     border-radius: 50%;
+     left: calc(50% - 30px);
+     top: 120px;
+     font-size:20px;
+     font-weight:bold;
+     background:#7f838e;
+}
+ .pro-des P{
+     text-align:left;
+}
+ .pr-pr-gr{
+     position: relative;
+     top: 16px;
+     color:#fff;
+}
+ .btnwpr{
+     position: absolute;
+     left:0;
+     bottom:-20px;
+     width:100%;
+     text-align:center;
+}
+ .orbtn{
+    display:inline-block;
+    width:150px;
+}
+ .mat-raised-button.mat-warn{
+     width:100%;
+     padding:5px 10px;
+     border-radius:3px;
+     background:#7f838e;
+}
+ .srchftr{
+    margin:20px 0;
+}
+ .srchftr input{
+    color:#fff;
+}
+ .fltbtn{
+     position: fixed;
+     width: 100%;
+     background:rgba(255, 255, 255, 0.7);
+     padding: 10px;
+     bottom: 0;
+     box-sizing: border-box;
+}
+ .flrdet.active{
+     width:100%;
+}
+ .flrdet{
+     position:absolute;
+    top:0;
+    width:0%;
+    min-height:100%;
+    background:#fff;
+    overflow:hidden;
+    transition:.5s all ease;
+     box-sizing:border-box;
+}
+ .mat-slider-horizontal{
+    min-width:100%;
+}
+ .fldhd{
+    margin:0 0 10px;
+    text-align:left;
+    font-size:20px;
+}
+ .flds{
+    padding:15px 20px;
+    border-bottom:2px solid #d1d1d1;
+}
+ .clsftr{
+    padding: 20px;
+     display: block;
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     right: 0;
+     top: 0;
+}
+ .clsftr img{
+    width:100%;
+}
+ .flrdet .mat-select-value{
+    color:#000;
+}
+ .orbtn button{
+    text-transform:uppercase;
+}
+ .prname{
+    position:absolute;
+    top:0;
+    color:#fff;
+    width:100%;
+    font-size:24px;
+}
+ .ucart{
+    padding:0px 0;
+    margin:0;
+}
+ .prhd{
+    border-bottom:2px solid #d1d1d1;
+    list-style:none;
+    padding:10px 0;
+    position:relative;
+}
+ .prhd span{
+    display: inline-block;
+    width: 32.7%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    vertical-align:middle;
+}
+ .prhd span img{
+    width:100px;
+    height:100px;
+    border-radius:5px;
+}
+ span .pn{
+    width:100%;
+}
+ span input,span button{
+    display:inline-block;
+    width: 29.5%!important;
+    min-width: 29.5%!important;
+    box-sizing: border-box;
+}
+ span button{
+    padding: 0px 10px!important;
+}
+ span input{
+    padding: 8px 0;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #7f838e;
+    text-align: center;
+}
+/* .flrdet active */
+ .flrdet .fltbtn{
+    position:absolute;
+}
+ .flrdet.active .fltbtn{
+    position:fixed;
+}
+.fltbtn button{pointer-events:none;}
+.fltbtn button.active{background: #37323d;pointer-events:auto;}
+ span input.bgslstamt{
+    border:0;
+}
+ .tlpd span:first-child{
+    width:65.4%;
+    text-align:right;
+}

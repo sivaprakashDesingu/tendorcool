@@ -1,0 +1,57 @@
+<div class="stspage">
+  <div class="bkhdr">
+    <a (click)="goBack()">
+      <img src="assets/img/icons/back-white.svg" width="20" height="20" alt="src">
+    </a>
+    <span class="bkhdg">Booking Status</span>
+  </div>
+
+  <div class="boking">
+    <p>Hi, {{uname}} Thanks for booking, </p>
+ 
+
+    <div class="lst cls">
+          <div class="col-3">
+            Product ID
+          </div>
+          <div class="col-3">
+            Quantity
+          </div>
+          <div class="col-3">
+            Price
+          </div>
+          
+    </div>
+        <div class="lst cls " *ngFor="let lst of list">
+          <div class="col-3 rs">
+            {{lst.id}}  
+          </div>
+          <div class="col-3 rs">
+            {{lst.qua}}  
+          </div>
+          <div class="col-3 rs">
+            {{lst.prs}}  
+          </div>
+          
+    </div>
+        <div class="lst tal cls ">
+          <div class="col-3 rs">
+            Total 
+          </div>
+          <div class="col-3 rs">
+            {{ttcst}}  
+          </div>
+          
+        </div>
+ <p>The above items will be deliveried you within 2 Hrs. </p>
+
+    <div class="notdet">
+      <p><u>Note:</u></p>
+    <p>Currently we are not providing the option to return</p> 
+    <p>which will be expected in future and thanks for your patinet.</p>
+    </div>
+    </div>
+   
+  <!-- <a class="bkbtn" routerLink="/book"><button mat-raised-button color="warn">{{this.pass.isUpNew}} Again</button></a> -->
+  <a class="bkbtn" routerLink="/"><button mat-raised-button color="warn">Go Home</button></a>
+</div> 
